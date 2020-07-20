@@ -127,6 +127,11 @@ function Modal() {
           state: "",
         }));
       }
+    }
+  }, [stateButton]);
+
+  useEffect(() => {
+    if (didMountRef.current) {
       if (destinationButton === "Destinations") {
         console.log("here");
         setError((prevErrors) => ({
@@ -141,7 +146,7 @@ function Modal() {
         }));
       }
     } else didMountRef.current = true;
-  }, [destinationButton, stateButton]);
+  }, [destinationButton]);
 
   const handleChange = (event) => {
     var pattern = /^[789]\d{9}$/;
