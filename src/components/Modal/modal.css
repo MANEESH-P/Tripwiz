@@ -1,0 +1,112 @@
+@media (min-width: 768px) {
+  .modal-lg {
+    width: 950px;
+    margin: auto;
+  }
+
+  .modal-body {
+    padding: 20px 50px 70px 50px;
+  }
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-content {
+  background-color: #df3d39;
+}
+
+.modal-title {
+  font-family: "Bebas Neue";
+  font-size: 39px;
+  text-align: left;
+}
+
+.modal-btn {
+  background: #9b1f1b;
+  color: white;
+  border-radius: 0;
+  width: 100%;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #b0b0b0;
+}
+
+.dropdown {
+  background: white;
+  width: 100%;
+  border-radius: 0;
+  text-align: left;
+  color: #b0b0b0;
+}
+
+button.dropdown:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.dropdown-menu {
+  width: 100%;
+  border-radius: 0;
+  background: #e9e9e9;
+  padding: 0px 30px;
+  margin-top: -2px;
+}
+
+.dropdown-item {
+  margin-bottom: 10px;
+  color: #b9b9b9;
+  padding: 10px 0px 0px 0px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background: #e9e9e9;
+  color: #b0b0b0;
+  font-weight: bold;
+}
+
+li.disabled {
+  pointer-events: none;
+}
+
+span.caret {
+  float: right;
+  color: #000000;
+}
+
+input.form-control {
+  border-radius: 0;
+}
+
+select.custom-select {
+  border-radius: 0;
+}
+
+select option[disabled] {
+  display: none;
+}
+
+option {
+  background-color: #e9e9e9;
+  color: #b9b9b9;
+}
+
+hr.dropdown {
+  border: none;
+  height: 1px;
+  background-color: #b9b9b9;
+  margin-top: 0;
+  margin-bottom: 0;
+  /* padding: 0.25rem 1.5rem; */
+}
+
+select:focus {
+  border: none;
+  outline: none;
+}
+select > option {
+  font-weight: normal;
+}

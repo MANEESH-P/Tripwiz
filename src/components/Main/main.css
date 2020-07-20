@@ -1,0 +1,74 @@
+.jumbotron {
+  background-color: #df3d39;
+  background-image: url("../../assets/pattern.png");
+  background-repeat: repeat;
+  margin-bottom: 50px;
+}
+
+.jumbotron-row {
+  padding: 85px 0px;
+}
+.jumbotron-heading {
+  font-size: 80px;
+  text-align: right;
+  font-family: "Bebas Neue", cursive;
+  line-height: 70px;
+}
+.jumbotron-text {
+  font-size: 20px;
+  text-align: left;
+  color: #e9e9e9;
+  line-height: 23px;
+}
+
+hr#heading {
+  height: 20px;
+  border: none;
+  background: white;
+}
+
+.section {
+  padding: 75px 0px;
+}
+
+.section-container {
+  margin-bottom: 50px;
+}
+
+.section-heading {
+  text-align: left;
+  font-size: 39px;
+  font-family: "Bebas Neue", cursive;
+}
+
+.section-text {
+  text-align: left;
+}
+
+.section-btn {
+  float: left;
+  background: #df3d39;
+  color: white;
+  padding: 10px;
+  border-radius: 0;
+  font-weight: bold;
+  /* font-size: 22px; */
+}
+
+.column-right {
+  margin-top: 40px;
+}
+
+.card {
+  height: 100%;
+}
+
+@media (min-width: 767px) {
+  .column-right {
+    margin-top: 80px;
+  }
+
+  .column-left {
+    margin-right: 40px;
+  }
+}
