@@ -55,6 +55,10 @@ hr#heading {
   /* font-size: 22px; */
 }
 
+.section-btn:focus {
+  outline: none;
+}
+
 .column-right {
   margin-top: 40px;
 }

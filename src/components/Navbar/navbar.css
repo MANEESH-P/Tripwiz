@@ -12,6 +12,10 @@
   font-weight: 600;
 }
 
+.navbar-toggler:hover {
+  outline: none;
+}
+
 /* navbar */
 .navbar-default {
   background-color: #e9e9e9;
