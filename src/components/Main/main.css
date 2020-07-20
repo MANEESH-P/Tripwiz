@@ -57,6 +57,7 @@ hr#heading {
 
 .section-btn:focus {
   outline: none;
+  box-shadow: none;
 }
 
 .column-right {
