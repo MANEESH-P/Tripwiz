@@ -5,9 +5,3 @@
 a#footer-link {
   color: #b9b9b9;
 }
-
-@media (min-width: 768px) {
-  ul {
-    margin-left: 50px;
-  }
-}
