@@ -180,7 +180,7 @@ function Modal() {
           <div class="modal-header">
             <button
               type="button"
-              class="close"
+              className="close"
               data-dismiss="modal"
               aria-label="Close"
               onClick={resetModal}

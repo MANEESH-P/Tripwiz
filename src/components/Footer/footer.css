@@ -6,11 +6,6 @@ a#footer-link {
   color: #b9b9b9;
 }
 
-/* @media only screen and (max-width: 1024px) and (max-height: 1366px) {
-  .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-  }
-} */
+a.nav-link {
+  padding: 0.5rem 0rem;
+}

@@ -11,6 +11,11 @@
 
 input.form-control {
   background-color: white;
+  border: 1px solid white;
+}
+
+button.close:focus {
+  outline: none;
 }
 
 .modal-header {
@@ -19,6 +24,7 @@ input.form-control {
 
 .modal-content {
   background-color: #df3d39;
+  border: 1px solid white;
 }
 
 .modal-title {
@@ -32,6 +38,11 @@ input.form-control {
   color: white;
   border-radius: 0;
   width: 100%;
+}
+
+.modal-btn:focus {
+  outline: 0;
+  box-shadow: none;
 }
 
 .form-control::-webkit-input-placeholder {
