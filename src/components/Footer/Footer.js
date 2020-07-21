@@ -3,7 +3,7 @@ import "./footer.css";
 
 function Footer() {
   return (
-    <nav class="nav sticky footer">
+    <nav class="nav  footer">
       <div className="container">
         <ul class="nav mt-3 mb-3">
           <li class="nav-item">

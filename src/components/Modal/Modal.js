@@ -77,20 +77,17 @@ function Modal() {
         state: `Please enter state`,
       }));
     } else {
-      console.log("else");
       setError((prevErrors) => ({
         ...prevErrors,
         state: "",
       }));
     }
     if (destinationButton === "Destinations") {
-      console.log("here");
       setError((prevErrors) => ({
         ...prevErrors,
         destination: `please enter destination`,
       }));
     } else {
-      console.log("else");
       setError((prevErrors) => ({
         ...prevErrors,
         destination: "",
@@ -114,14 +111,12 @@ function Modal() {
 
   useEffect(() => {
     if (didMountRef.current) {
-      console.log("useeffect");
       if (stateButton === "Select your state") {
         setError((prevErrors) => ({
           ...prevErrors,
-          state: `Please enter state`,
+          state: "Please enter state",
         }));
       } else {
-        console.log("else");
         setError((prevErrors) => ({
           ...prevErrors,
           state: "",
@@ -133,13 +128,11 @@ function Modal() {
   useEffect(() => {
     if (didMountRef.current) {
       if (destinationButton === "Destinations") {
-        console.log("here");
         setError((prevErrors) => ({
           ...prevErrors,
           destination: `please enter destination`,
         }));
       } else {
-        console.log("else");
         setError((prevErrors) => ({
           ...prevErrors,
           destination: "",
@@ -176,7 +169,7 @@ function Modal() {
     <div
       class="modal fade"
       id="modal"
-      tabindex="-1"
+      tabIndex="-1"
       role="dialog"
       aria-labelledby="exampleModalCenterTitle"
       aria-hidden="true"
@@ -200,7 +193,7 @@ function Modal() {
           <div class="modal-body">
             <form>
               <div className="row">
-                <div className="col-lg-6">
+                <div className="col-lg-6 container-left">
                   <h5 className="modal-title">ENTER YOUR DETAILS</h5>
 
                   <div class="form-group">
@@ -262,7 +255,7 @@ function Modal() {
                     )}
                   </div>
                 </div>
-                <div className="col-lg-6">
+                <div className="col-lg-6 container-right">
                   <h5 className="modal-title">SELECT YOUR DESTINATION</h5>
 
                   <div class="form-group custom-dropdown state">
@@ -367,7 +360,7 @@ function Modal() {
                   </div>
 
                   <div className="row">
-                    <div className="col-lg-6 col-6">
+                    <div className="col-lg-6 col-6 " id="left-btn">
                       <button
                         onClick={handleSubmit}
                         type="submit"
@@ -376,10 +369,10 @@ function Modal() {
                         Submit
                       </button>
                     </div>
-                    <div className="col-lg-6 col-6">
+                    <div className="col-lg-6 col-6" id="right-btn">
                       <button
                         onClick={resetModal}
-                        class="btn modal-btn"
+                        class="btn modal-btn "
                         data-dismiss="modal"
                       >
                         Cancel

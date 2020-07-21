@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React from "react";
 import image from "../../assets/image.png";
 import "./main.css";
 import Modal from "../Modal/Modal";
@@ -6,11 +6,11 @@ import Modal from "../Modal/Modal";
 function Main() {
   return (
     <>
-      <div class="jumbotron jumbotron-fluid">
+      <div className="jumbotron jumbotron-fluid">
         <div className="container">
           <div className="jumbotron-row row">
             <div className="col-12 col-md-6 col-lg-5 offset-lg-1 col-sm-12">
-              <h1 class="display-4 jumbotron-heading text-white">
+              <h1 className="display-4 jumbotron-heading text-white">
                 DISCOVER NEW ADVENTURES
               </h1>
               <hr id="heading" />
@@ -31,13 +31,13 @@ function Main() {
       </div>
       <div className="container section-container">
         <div className="row section">
-          <div className="col-lg-6 offset-lg-1 column-left">
-            <div class="card">
-              <img class="card-img-top" src={image} alt="Card image cap" />
+          <div className="col-12 col-md-12 col-lg-6 offset-lg-1 column-left">
+            <div className="card">
+              <img className="card-img-top" src={image} alt="Card image cap" />
             </div>
           </div>
-          <div className="col-lg-4 column-right">
-            <h1 class="section-heading text-black">HERE WE GO</h1>
+          <div className="col-12 col-md-12 col-lg-4 column-right">
+            <h1 className="section-heading text-black">HERE WE GO</h1>
             <p className="section-text">
               We will design a complete itinerary for you. From suggesting our
               favourite places that we are sure you'd love and the sights you
@@ -47,7 +47,7 @@ function Main() {
             </p>
             <button
               type="button"
-              class="btn btn-sm section-btn"
+              className="btn btn-sm section-btn"
               data-toggle="modal"
               data-target="#modal"
             >

@@ -3,13 +3,13 @@ import "./navbar.css";
 
 function Navbar() {
   return (
-    <nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-default navbar-expand-lg navbar-light bg-light">
       <div className="container">
-        <a class="navbar-brand" href="#">
+        <a className="navbar-brand" href="#">
           TRIPWIZ
         </a>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarTogglerDemo03"
@@ -17,24 +17,24 @@ function Navbar() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+        <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li className="nav-item">
+              <a className="nav-link" href="#">
                 Experiences
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+            <li className="nav-item">
+              <a className="nav-link" href="#">
                 Questions
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">
-                <button type="button" class="btn navbar-btn  btn-sm">
+            <li className="nav-item">
+              <a className="nav-link disabled" href="#">
+                <button type="button" className="btn navbar-btn  btn-sm">
                   SIGN IN
                 </button>
               </a>
