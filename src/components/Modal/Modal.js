@@ -64,7 +64,6 @@ function Modal() {
 
   const handleDestinationClick = (e) => {
     didMountRef.current = true;
-    console.log(e.target.innerHTML);
     setDestinationButton(e.target.innerHTML);
     setFormFields({ ...formFields, destination: e.target.innerHTML });
   };
@@ -72,12 +71,12 @@ function Modal() {
   const handleSubmit = (e) => {
     e.preventDefault();
     for (const key in formFields) {
-      validateControl(key);
+      validateInput(key);
     }
     if (stateButton === "Select your state") {
       setError((prevErrors) => ({
         ...prevErrors,
-        state: `Please enter state`,
+        state: "Please enter state",
       }));
     } else {
       setError((prevErrors) => ({
@@ -88,7 +87,7 @@ function Modal() {
     if (destinationButton === "Destinations") {
       setError((prevErrors) => ({
         ...prevErrors,
-        destination: `please enter destination`,
+        destination: "please enter destination",
       }));
     } else {
       setError((prevErrors) => ({
@@ -98,24 +97,24 @@ function Modal() {
     }
   };
 
-  const validateControl = (control) => {
+  const validateInput = (input) => {
     let error = "";
     var pattern = /^[789]\d{9}$/;
     const EmailRegex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-    if (formFields[control] === "") {
-      error = `please enter ${control}`;
+    if (formFields[input] === "") {
+      error = `please enter ${input}`;
     } else {
-      switch (control) {
+      switch (input) {
         case "name":
-          error = formFields[control].length <= 0 ? "Name is required" : "";
+          error = formFields[input].length <= 0 ? "Name is required" : "";
           break;
         case "email":
-          error = !EmailRegex.test(formFields[control])
+          error = !EmailRegex.test(formFields[input])
             ? "Enter valid email"
             : "";
           break;
         case "phoneNumber":
-          error = !pattern.test(formFields[control])
+          error = !pattern.test(formFields[input])
             ? "Enter valid phonenumber"
             : "";
           break;
@@ -126,12 +125,11 @@ function Modal() {
 
     setError((prevErrors) => ({
       ...prevErrors,
-      [control]: [error],
+      [input]: [error],
     }));
   };
 
   useEffect(() => {
-    console.log("state useEffect");
     if (didMountRef.current) {
       if (stateButton === "Select your state") {
         setError((prevErrors) => ({
@@ -148,7 +146,6 @@ function Modal() {
   }, [stateButton]);
 
   useEffect(() => {
-    console.log("destination useEffect");
     if (didMountRef.current) {
       if (destinationButton === "Destinations") {
         setError((prevErrors) => ({
@@ -215,7 +212,7 @@ function Modal() {
               </span>
             </button>
           </div>
-          <div class="modal-body">
+          <div className="modal-body">
             <form>
               <div className="row">
                 <div className="col-lg-6 container-left">
@@ -224,7 +221,7 @@ function Modal() {
                   <div class="form-group">
                     <input
                       name="name"
-                      class="form-control"
+                      className="form-control"
                       type="text"
                       placeholder="Name"
                       required
@@ -242,7 +239,7 @@ function Modal() {
                   <div class="form-group">
                     <input
                       name="email"
-                      class="form-control"
+                      className="form-control"
                       type="email"
                       placeholder="E-mail"
                       data-error="Email is required"
@@ -260,7 +257,7 @@ function Modal() {
                   <div class="form-group">
                     <input
                       name="phoneNumber"
-                      class="form-control"
+                      className="form-control"
                       type="text"
                       placeholder="Phone No"
                       required
@@ -283,8 +280,8 @@ function Modal() {
                 <div className="col-lg-6 container-right">
                   <h5 className="modal-title">SELECT YOUR DESTINATION</h5>
 
-                  <div class="form-group custom-dropdown state">
-                    <div class="dropdown">
+                  <div className="form-group custom-dropdown state">
+                    <div className="dropdown">
                       <button
                         class="btn dropdown"
                         type="button"
@@ -295,18 +292,21 @@ function Modal() {
                       >
                         {stateButton}
                         <span class="caret">
-                          <i class="fa fa-caret-down" aria-hidden="true"></i>
+                          <i
+                            className="fa fa-caret-down"
+                            aria-hidden="true"
+                          ></i>
                         </span>
                       </button>
                       <div
-                        class="dropdown-menu"
+                        className="dropdown-menu"
                         aria-labelledby="dropdownMenuButton"
                       >
                         <li
                           onClick={(e) => {
                             handleStateClick(e);
                           }}
-                          class="dropdown-item"
+                          className="dropdown-item"
                         >
                           Kerala
                         </li>
@@ -315,7 +315,7 @@ function Modal() {
                           onClick={(e) => {
                             handleStateClick(e);
                           }}
-                          class="dropdown-item"
+                          className="dropdown-item"
                         >
                           Tamil Nadu
                         </li>
@@ -325,10 +325,10 @@ function Modal() {
                       <span className="error">{errors.state}</span>
                     )}
                   </div>
-                  <div class="form-group custom-dropdown state">
-                    <div class="dropdown">
+                  <div className="form-group custom-dropdown state">
+                    <div className="dropdown">
                       <button
-                        class="btn dropdown"
+                        className="btn dropdown"
                         type="button"
                         id="dropdownMenuButton2"
                         data-toggle="dropdown"
@@ -336,12 +336,15 @@ function Modal() {
                         aria-expanded="false"
                       >
                         {destinationButton}
-                        <span class="caret">
-                          <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        <span className="caret">
+                          <i
+                            className="fa fa-caret-down"
+                            aria-hidden="true"
+                          ></i>
                         </span>
                       </button>
                       <div
-                        class="dropdown-menu"
+                        className="dropdown-menu"
                         aria-labelledby="dropdownMenuButton"
                       >
                         {destinations.length !== 0 ? (
@@ -353,7 +356,7 @@ function Modal() {
                                     onClick={(e) => {
                                       handleDestinationClick(e);
                                     }}
-                                    class="dropdown-item"
+                                    className="dropdown-item"
                                   >
                                     {item}
                                   </li>
@@ -367,7 +370,7 @@ function Modal() {
                                   onClick={(e) => {
                                     handleDestinationClick(e);
                                   }}
-                                  class="dropdown-item"
+                                  className="dropdown-item"
                                 >
                                   {item}
                                 </li>
@@ -375,7 +378,9 @@ function Modal() {
                             }
                           })
                         ) : (
-                          <li class="dropdown-item disabled">Choose a state</li>
+                          <li className="dropdown-item disabled">
+                            Choose a state
+                          </li>
                         )}
                       </div>
                     </div>
@@ -389,7 +394,7 @@ function Modal() {
                       <button
                         onClick={handleSubmit}
                         type="submit"
-                        class="btn modal-btn"
+                        className="btn modal-btn"
                       >
                         Submit
                       </button>
@@ -397,7 +402,7 @@ function Modal() {
                     <div className="col-lg-6 col-6" id="right-btn">
                       <button
                         onClick={resetModal}
-                        class="btn modal-btn "
+                        className="btn modal-btn "
                         data-dismiss="modal"
                       >
                         Cancel
