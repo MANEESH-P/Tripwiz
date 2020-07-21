@@ -50,6 +50,7 @@ function Modal() {
   };
 
   const handleStateClick = (e) => {
+    didMountRef.current = true;
     setStateButton(e.target.innerHTML);
     setFormFields({ ...formFields, state: e.target.innerHTML });
     if (e.target.innerHTML === "Kerala") {
@@ -62,6 +63,8 @@ function Modal() {
   };
 
   const handleDestinationClick = (e) => {
+    didMountRef.current = true;
+    console.log(e.target.innerHTML);
     setDestinationButton(e.target.innerHTML);
     setFormFields({ ...formFields, destination: e.target.innerHTML });
   };
@@ -128,6 +131,7 @@ function Modal() {
   };
 
   useEffect(() => {
+    console.log("state useEffect");
     if (didMountRef.current) {
       if (stateButton === "Select your state") {
         setError((prevErrors) => ({
@@ -144,6 +148,7 @@ function Modal() {
   }, [stateButton]);
 
   useEffect(() => {
+    console.log("destination useEffect");
     if (didMountRef.current) {
       if (destinationButton === "Destinations") {
         setError((prevErrors) => ({
@@ -156,7 +161,9 @@ function Modal() {
           destination: "",
         }));
       }
-    } else didMountRef.current = true;
+    } else {
+      didMountRef.current = true;
+    }
   }, [destinationButton]);
 
   const handleChange = (event) => {
