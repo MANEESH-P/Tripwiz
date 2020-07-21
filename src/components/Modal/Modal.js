@@ -99,7 +99,7 @@ function Modal() {
 
   const validateInput = (input) => {
     let error = "";
-    var pattern = /^[789]\d{9}$/;
+    var pattern = /^[6789]\d{9}$/;
     const EmailRegex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     if (formFields[input] === "") {
       error = `please enter ${input}`;
@@ -164,7 +164,7 @@ function Modal() {
   }, [destinationButton]);
 
   const handleChange = (event) => {
-    var pattern = /^[789]\d{9}$/;
+    var pattern = /^[6789]\d{9}$/;
     const EmailRegex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     event.preventDefault();
     const { name, value } = event.target;
