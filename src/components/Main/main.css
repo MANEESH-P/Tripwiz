@@ -21,7 +21,7 @@
   text-align: left;
   color: #e9e9e9;
   line-height: 23px;
-  font-family: "Roboto";
+  font-family: "Helvetica Neue", "Roboto";
   font-weight: 300;
 }
 
@@ -49,7 +49,7 @@ hr#heading {
   text-align: left;
   font-size: 20px;
   line-height: 23px;
-  font-family: "Roboto";
+  font-family: "Helvetica Neue", "Roboto";
   font-weight: 300;
 }
 

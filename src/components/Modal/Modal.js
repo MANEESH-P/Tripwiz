@@ -96,17 +96,35 @@ function Modal() {
   };
 
   const validateControl = (control) => {
+    let error = "";
+    var pattern = /^[789]\d{9}$/;
+    const EmailRegex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     if (formFields[control] === "") {
-      setError((prevErrors) => ({
-        ...prevErrors,
-        [control]: `please enter ${control}`,
-      }));
+      error = `please enter ${control}`;
     } else {
-      setError((prevErrors) => ({
-        ...prevErrors,
-        [control]: "",
-      }));
+      switch (control) {
+        case "name":
+          error = formFields[control].length <= 0 ? "Name is required" : "";
+          break;
+        case "email":
+          error = !EmailRegex.test(formFields[control])
+            ? "Enter valid email"
+            : "";
+          break;
+        case "phoneNumber":
+          error = !pattern.test(formFields[control])
+            ? "Enter valid phonenumber"
+            : "";
+          break;
+        default:
+          break;
+      }
     }
+
+    setError((prevErrors) => ({
+      ...prevErrors,
+      [control]: [error],
+    }));
   };
 
   useEffect(() => {
